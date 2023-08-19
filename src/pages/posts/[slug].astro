@@ -20,13 +20,14 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout title={post.data.title + ` — munawarjs.com`} description={post.data.description}>
   <main class="post mx-auto flex w-full max-w-prose flex-col gap-4">
     <header role="presentation">
-      <h1 class="text-2xl">
-        {post.data.title} - {formatDate(post.data.publishedAt)}
+      <h1 class="text-3xl text-white">
+        {post.data.title}
       </h1>
-      <p class="italic">{post.data.description}</p>
+      <p>{formatDate(post.data.publishedAt)}</p>
+      <!-- <p class="italic">{post.data.description}</p> -->
     </header>
 
     <Content />

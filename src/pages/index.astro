@@ -7,6 +7,7 @@ import PostCard from "@/components/PostCard.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 import Link from "@/components/shared/Link.astro";
 import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
+import SEOTags from "@/components/seo/SEOTags.astro";
 
 import presentation from "@/data/presentation";
 import projects from "@/data/projects";
@@ -51,7 +52,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       </header>
       {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
-      <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
+      <section class="flex flex-col gap-12 md:flex-row md:flex-wrap">
         {
           posts.length !== 0 &&
             posts

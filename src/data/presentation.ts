@@ -26,6 +26,10 @@ const presentation: Presentation = {
       label: "Github",
       link: "https://github.com/munawar-js",
     },
+    {
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/munawarjs/",
+    },
   ],
 };
 
