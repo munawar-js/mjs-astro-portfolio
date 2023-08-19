@@ -16,7 +16,7 @@ Another option is WordPress, which many people like. But here's the issue: I'd e
 
 So, I looked around the Jamstack ecosystem and found [Astro](https://astro.build/).
 
-<img src="../opengraph-image.jpg" alt="Maewolff portfolio thumbnail"/>
+<img src="/opengraph-image.jpg" alt="Maewolff portfolio thumbnail"/>
 
 I found a good-looking template, the [Maewolff portfolio](https://astro.build/themes/details/maewolff-portfolio-template/). I made a few changes and boom, The first version is up and running on Netlify.
 
