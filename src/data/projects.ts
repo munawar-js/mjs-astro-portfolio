@@ -17,9 +17,19 @@ const projects: Project[] = [
     link: "https://stackrole.com",
   },
   {
-    title: "Freshcaller at Freshworks",
+    title: "Freshcaller @ Freshworks",
     techs: ["UI/UX design", "Design System", "Figma"],
     link: "https://www.freshworks.com/freshcaller-cloud-pbx/"
+  },
+  {
+    title: "Freshchat @ Freshworks",
+    techs: ["HTML", "CSS", "JavaScript", "EmberJS"],
+    link: "https://www.freshworks.com/live-chat-software/"
+  },
+  {
+    title: "Freshdesk @ Freshworks",
+    techs: ["HTML", "CSS", "JavaScript", "Ruby on Rails"],
+    link: "https://www.freshworks.com/live-chat-software/"
   },
   {
     title: "Mobifreaks",

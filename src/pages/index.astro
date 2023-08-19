@@ -4,13 +4,10 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
 import PostCard from "@/components/PostCard.astro";
-import ProjectCard from "@/components/ProjectCard.astro";
 import Link from "@/components/shared/Link.astro";
 import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
-import SEOTags from "@/components/seo/SEOTags.astro";
 
 import presentation from "@/data/presentation";
-import projects from "@/data/projects";
 
 const posts = (await getCollection("posts")).sort(function (first, second) {
   return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
@@ -32,12 +29,12 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       }
 
       <div class="flex flex-col gap-8">
-        <h1 class="text-3xl text-neutral-100">
+        <h1 class="text-3xl text-neutral-100 font-black">
           {presentation.title}
         </h1>
 
         <h2
-          class="w-auto max-w-[80ch] leading-6"
+          class="w-auto max-w-[80ch] leading-8 text-lg"
           set:html={convertAsteriskToStrongTag(presentation.description)}
         />
 
@@ -52,11 +49,11 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       </header>
       {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
-      <section class="flex flex-col gap-12 md:flex-row md:flex-wrap">
+      <section class="flex flex-col gap-6 md:flex-row md:flex-wrap">
         {
           posts.length !== 0 &&
             posts
-              .slice(0, 2)
+              .slice(0, 5)
               .map((post) => (
                 <PostCard
                   publishedAt={post.data.publishedAt}
@@ -65,22 +62,6 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
                   slug={post.slug}
                 />
               ))
-        }
-      </section>
-    </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">
-          Selected projects ({projects.length})
-        </h3>
-      </header>
-      {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
-
-      <section class="flex flex-col gap-4">
-        {
-          projects.length !== 0 &&
-            projects.map((project) => <ProjectCard {...project} />)
         }
       </section>
     </article>
