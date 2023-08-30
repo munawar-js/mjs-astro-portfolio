@@ -1,7 +1,7 @@
 ---
 title: "Link Prefetching: Comparative look at Astro, Next.js, and Gatsby.js"
 publishedAt: 2023-08-29
-description: "link prefetching through a comparative lens, dissecting the unique approaches of Astro, Next.js, and Gatsby.js. Delve into the mechanisms that drive faster navigation and improved user experience in different frameworks."
+description: "Link prefetching through a comparative lens, dissecting the unique approaches of Astro, Next.js, and Gatsby.js. Delve into the mechanisms that drive faster navigation and improved user experience in different frameworks."
 slug: "link-prefetching-astro-next-gatsby"
 isPublish: true
 ---
