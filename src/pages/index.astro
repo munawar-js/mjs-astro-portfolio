@@ -9,9 +9,14 @@ import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
 
 import presentation from "@/data/presentation";
 
-const posts = (await getCollection("posts")).sort(function (first, second) {
+const posts = await getCollection("posts");
+
+const publishedPosts = posts.filter(post => post.data.isPublish);
+
+const sortedPublishedPosts = publishedPosts.sort((first, second) => {
   return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
 });
+
 ---
 
 <Layout>
@@ -47,12 +52,12 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
         <h3 class="text-lg text-neutral-100">Latest posts</h3>
         <Link href="/posts" label="See all posts" isUnderline target="_self" />
       </header>
-      {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
+      {sortedPublishedPosts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
       <section class="flex flex-col gap-6 md:flex-row md:flex-wrap">
         {
-          posts.length !== 0 &&
-            posts
+          sortedPublishedPosts.length !== 0 &&
+          sortedPublishedPosts
               .slice(0, 5)
               .map((post) => (
                 <PostCard
