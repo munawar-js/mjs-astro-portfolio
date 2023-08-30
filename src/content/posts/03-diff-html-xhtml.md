@@ -3,6 +3,8 @@ title: "Decoding difference between HTML and XHTML"
 publishedAt: 2023-08-30
 description: "Enhance your web development skills as we unravel the intriguing HTML vs XHTML debate"
 slug: "difference-between-HTML-XHTML"
+tags:
+  - HTML
 isPublish: true
 ---
 

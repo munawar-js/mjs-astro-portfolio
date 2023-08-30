@@ -3,6 +3,8 @@ title: "Launch of munawarjs.com with Astro"
 publishedAt: 2023-08-19
 description: "Website is up and running with Astro in Under 3 Hours 🤩"
 slug: "launch"
+tags:
+  - General
 isPublish: true
 ---
 
