@@ -4,7 +4,7 @@ publishedAt: 2023-08-18
 description: "Every programming journey begins with \"Hello World\", and the same holds true for launching a website."
 slug: "hello"
 tags:
-  - General
+  - Updates
 isPublish: true
 ---
 
