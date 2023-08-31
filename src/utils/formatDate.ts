@@ -1,3 +1,6 @@
+import moment from "moment";
+
 export default function formatDate(date: Date) {
-  return new Intl.DateTimeFormat("en-GB").format(date);
+  return moment(date, 'YYYYMMDD').fromNow();
+  // return new Intl.DateTimeFormat("en-US").format(date);
 }
