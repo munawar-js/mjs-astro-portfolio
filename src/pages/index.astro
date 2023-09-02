@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 import Layout from "@/layouts/Layout.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
-import PostCard from "@/components/PostCard.astro";
+import PostCardV2 from "@/components/PostCardV2.astro";
 import Link from "@/components/shared/Link.astro";
 import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
 
@@ -34,33 +34,36 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
       }
 
       <div class="flex flex-col gap-8">
-        <h1 class="text-3xl text-neutral-100 font-black">
-          {presentation.title}
-        </h1>
+        <div>
+
+          <span class="text-base leading-8 text-slate-400">{presentation.salutation}</span>
+          <h1 
+            class="text-3xl md:text-5xl text-neutral-100 font-normal"
+            set:html={presentation.title}
+          />
+        </div>
 
         <h2
-          class="w-auto max-w-[80ch] leading-8 text-lg"
+          class="w-auto max-w-[75ch] leading-7 md:leading-8 text-lg md:text-xl text-slate-400"
           set:html={convertAsteriskToStrongTag(presentation.description)}
         />
-
-        <SocialLinks />
       </div>
     </article>
 
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Latest posts</h3>
-        <Link href="/posts" label="See all posts" isUnderline target="_self" />
+    <article class="flex flex-col gap-16">
+      <header class="flex w-full flex-row justify-between gap-2 items-baseline border-dashed border-y border-gray-800 py-4">
+        <h3 class="font-semibold text-slate-500 uppercase">Latest posts</h3>
+        <Link href="/posts" label="See all posts &rarr;" target="_self" />
       </header>
       {sortedPublishedPosts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
-      <section class="flex flex-col gap-6 md:flex-row md:flex-wrap">
+      <section class="flex flex-col gap-12 md:flex-row md:flex-wrap">
         {
           sortedPublishedPosts.length !== 0 &&
           sortedPublishedPosts
               .slice(0, 5)
               .map((post) => (
-                <PostCard
+                <PostCardV2
                   publishedAt={post.data.publishedAt}
                   title={post.data.title}
                   description={post.data.description}

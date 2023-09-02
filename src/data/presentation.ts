@@ -5,6 +5,7 @@ type Social = {
 
 type Presentation = {
   mail: string;
+  salutation: string;
   title: string;
   description: string;
   socials: Social[];
@@ -13,10 +14,11 @@ type Presentation = {
 
 const presentation: Presentation = {
   mail: "hey@munawarjs.com",
-  title: "Hey, I’m Munawar 👋",
+  salutation: "Hey there, I’m ",
+  title: "M <span>Munawar</span> Ahmed 👋",
   // profile: "/munawar-ahmed.png",
   description:
-    "I am bringing over 12 years of experience as a Frontend design engineer with a deep understanding of UI/UX design, React.js, WordPress and end-to-end development of web applications, websites, and design systems.",
+    "Frontend Design Engineer with a deep understanding of UI/UX Design, React.js, WordPress, and a proven track record in delivering end-to-end design and development solutions for web applications, websites, and design systems.",
   socials: [
     {
       label: "X",
