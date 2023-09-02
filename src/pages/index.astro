@@ -17,7 +17,7 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
 ---
 
 <Layout>
-  <main class="flex flex-col gap-20">
+  <main class="flex flex-col gap-16 md:gap-20">
     <article
       class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12"
     >
@@ -47,9 +47,9 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
       </div>
     </article>
 
-    <article class="flex flex-col gap-16">
+    <section class="flex flex-col gap-8 md:gap-16">
       <header class="flex w-full flex-row justify-between gap-2 items-baseline">
-        <h3 class="text-3xl font-medium text-slate-100">Latest posts</h3>
+        <h3 class="text-xl md:text-3xl font-medium text-slate-100">Latest posts</h3>
       </header>
       {sortedPublishedPosts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
@@ -68,9 +68,7 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
               ))
         }
       </section>
-      <!-- <header class="flex w-full flex-row justify-between gap-2 items-baseline "> -->
-        <a href="/posts" class="p-4 bg-slate-950/50 hover:bg-slate-950 border-solid border border-slate-700 rounded-lg text-center">See all {sortedPublishedPosts.length} posts &rarr;</a>
-      <!-- </header> -->
-    </article>
+      <a href="/posts" class="mt-4 md:mt-0 p-4 bg-slate-950/50 hover:bg-slate-950 border-solid border border-slate-700 rounded-lg text-center">See all {sortedPublishedPosts.length} posts &rarr;</a>
+    </section>
   </main>
 </Layout>

@@ -14,10 +14,10 @@ const { title, publishedAt, description, slug } = Astro.props;
 
 <article class="flex flex-col gap-5">
   <div>
-    <h3 class="font-medium text-2xl leading-8 text-slate-100 mb-1">
+    <h3 class="font-medium text-lg md:text-2xl leading-6 md:leading-8 text-slate-100 mb-0 md:mb-1">
       <a class="hover:text-sky-300 text-sky-500" href={`/posts/${slug}`}>{title}</a>
     </h3>
     <time class="text-slate-400 text-base" datetime={publishedAt}>{formatDate(publishedAt)}</time>
   </div>
-  <p class="text-lg text-slate-300 leading-7 font-normal">{description}</p>
+  <p class="text-base md:text-lg text-slate-300 leading-7 font-normal">{description}</p>
 </article>

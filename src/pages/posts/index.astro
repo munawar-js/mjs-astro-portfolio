@@ -9,7 +9,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
 ---
 
 <Layout title="All Posts — munawarjs.com">
-  <main class="flex flex-col gap-20">
+  <main class="flex flex-col gap-16 md:gap-20">
     <h1 class=" text-4xl font-semibold text-white">All posts ({posts.length})</h1>
 
     <article class="flex flex-col gap-12">
