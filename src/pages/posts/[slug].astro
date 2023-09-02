@@ -23,10 +23,23 @@ const { Content } = await post.render();
 <Layout title={post.data.title + ` — munawarjs.com`} description={post.data.description}>
   <main class="post mx-auto flex w-full flex-col gap-4">
     <header role="presentation" class="mb-8">
-      <h1 class="text-3xl leading-10 text-white font-semibold">
+      <h1 class="text-3xl leading-10 text-white font-semibold mb-4">
         {post.data.title}
       </h1>
-      <time class="text-base text-slate-500" datetime={post.data.publishedAt}>{formatDate(post.data.publishedAt)}</time>
+      <div class="text-slate-400 text-base">
+        <time datetime={post.data.publishedAt}>{formatDate(post.data.publishedAt)}</time>
+        <span> &bull; </span>
+        {post.data.tags && post.data.tags.length > 0 && (
+          <span>
+            {post.data.tags.map((tag, index) => (
+              <span>
+                <span key={index}>{tag}</span>
+                {post.data.tags.length - 1 !== index && (<span>, </span>)}
+              </span>
+            ))}
+          </span>
+        )}
+      </div>
       <!-- <p class="italic">{post.data.description}</p> -->
     </header>
 

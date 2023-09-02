@@ -6,9 +6,10 @@ type Props = {
   publishedAt: Date;
   description: string;
   slug: string;
+  tags: string[];
 };
 
-const { title, publishedAt, description, slug } = Astro.props;
+const { title, publishedAt, description, slug, tags } = Astro.props;
 ---
 
 
@@ -17,7 +18,20 @@ const { title, publishedAt, description, slug } = Astro.props;
     <h3 class="font-medium text-lg md:text-2xl leading-6 md:leading-8 text-slate-100 mb-0 md:mb-1">
       <a class="hover:text-sky-300 text-sky-500" href={`/posts/${slug}`}>{title}</a>
     </h3>
-    <time class="text-slate-400 text-base" datetime={publishedAt}>{formatDate(publishedAt)}</time>
+    <div class="text-slate-400 text-base">
+      <time datetime={publishedAt}>{formatDate(publishedAt)}</time>
+      <span> &bull; </span>
+      {tags && tags.length > 0 && (
+        <span>
+          {tags.map((tag, index) => (
+            <span>
+              <span key={index}>{tag}</span>
+              {tags.length - 1 !== index && (<span>, </span>)}
+            </span>
+          ))}
+        </span>
+      )}
+    </div>
   </div>
   <p class="text-base md:text-lg text-slate-300 leading-7 font-normal">{description}</p>
 </article>
