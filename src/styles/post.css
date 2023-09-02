@@ -3,7 +3,7 @@
 }
 
 .post code {
-  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-orange-500;
+  @apply rounded-sm bg-neutral-800 mx-1 px-1 py-[2px] text-orange-500 font-mono text-base;
 }
 
 .post strong,
@@ -18,9 +18,6 @@
   @apply mt-4 text-xl text-neutral-100 font-semibold;
 }
 
-.post code {
-  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-red-500;
-}
 
 .post a {
   @apply text-neutral-100 underline;

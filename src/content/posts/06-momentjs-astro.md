@@ -1,6 +1,6 @@
 ---
 title: "Enhancing your Astro website with moment.js for User-Friendly date displays"
-publishedAt: 2023-09-01
+publishedAt: 2023-09-02
 description: "Engage users with a smoother, intuitive experience by harnessing the power of moment.js on your Astro website. Install moment.js, apply it to components, and leverage the 'fromNow()' function for effortlessly relatable date displays."
 slug: "momentjs-astro-website"
 tags:
@@ -9,28 +9,28 @@ tags:
 isPublish: true
 ---
 
-When we're talking about writing styles for technical stuff, it's like having different tools in your writer's toolbox. Imagine you're writing for your blog, and you want to find the perfect style to connect with your readers.
+Incorporating moment.js into your Astro website can bring a new level of user-friendliness to your date and time presentations.
 
-### 1. The "Expository" Style: Building Block by Block
+To start, follow these steps:
 
-This one is like a step-by-step guide for building a LEGO set. It's clear and to the point, showing you exactly how things fit together. Perfect for explaining how things work, just like those tutorials on building cool stuff.
+**Install moment.js**
 
-**Example:** Think about writing a post on setting up Wi-Fi at home. You could use the "Expository" style to guide readers step by step.
+Begin by installing moment.js using the command **`npm install moment --save`**. This package will equip your project with the necessary tools.
 
-### 2. The "Conversational" Style: Chatting with a buddy
+**Implementation in Components**Identify the component within your website where you wish to implement the date changes. Utilize the **`moment()`** function, which accepts two key arguments: the date itself and the desired format, e.g., **`moment("20111031", "YYYYMMDD")`**.
 
-This is like having a chat with a buddy. You're not trying to impress anyone with fancy words – you're explaining things in a way that's super easy to understand. 
+**Leveraging `fromNow()`**
 
-**Example:** A blog post discussing the latest trends in AI, using everyday language and examples to make the content more relatable.
+The true magic happens with the **`fromNow()`** function. Apply it to your date structure, such as
 
-### 3. The "Narrative" Style: Technical Adventures
+ 
 
-This is like reading a storybook, but it's about technical things. You're not just giving facts; you're sharing an adventure. Imagine describing how you conquered a video game level – but instead, you're talking about solving technical challenges. It makes the technical stuff way more interesting!
+```jsx
+moment("20111031", "YYYYMMDD").fromNow() // 12 years ago
+```
 
-**Example:** A blog post describing the journey of building a mobile app, weaving in challenges faced and how they were overcome using specific technical solutions.
+This function converts your date into a user-friendly relative format, making it easily understandable.
 
-### Mixing It Up: Finding Your Unique Blend
+For more customisation and date formats take look at moment.js documentation
 
-For example, think about writing a post on setting up Wi-Fi at home. You could use the "Expository" style to guide readers step by step. Or, you might use the "Conversational" style to chat about the latest AI trends like you're catching up with a friend. And if you're talking about building an app, use the "Narrative" style to make it feel like an epic journey.
-
-Oh, and remember, there's no one-size-fits-all here. It's like picking the right flavor of ice cream – depends on what you and your readers like. Mixing up these styles can be a smart move to keep everyone happy. So go on, have fun with your writing adventure! 🚀📝
+By integrating moment.js into your Astro website, you can ensure that your date displays resonate more effectively with your users, fostering a smoother and more intuitive experience.
