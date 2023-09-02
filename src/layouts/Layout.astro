@@ -24,10 +24,5 @@ const headTags = Astro.props;
     <BlurCircle position="top" color={theme.colors.blur.top} />
     <BlurCircle position="bottom" color={theme.colors.blur.bottom} />
     <slot />
-    <style is:global>
-      html {
-        font-family: "Open Sans";
-      }
-    </style>
   </body>
 </html>
