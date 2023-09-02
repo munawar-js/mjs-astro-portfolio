@@ -1,5 +1,5 @@
 .post p {
-  @apply leading-7;
+  @apply text-lg text-slate-400 leading-7 font-normal;
 }
 
 .post code {
@@ -8,14 +8,14 @@
 
 .post strong,
 .post b {
-  @apply font-black text-neutral-100;
+  @apply font-medium text-neutral-100;
 }
 .post h2 {
-  @apply mt-6 text-3xl text-neutral-100;
+  @apply mt-6 text-3xl text-neutral-100 font-semibold;
 }
 
 .post h3 {
-  @apply mt-4 text-xl text-neutral-100;
+  @apply mt-4 text-xl text-neutral-100 font-semibold;
 }
 
 .post code {

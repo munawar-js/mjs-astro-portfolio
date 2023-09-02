@@ -1,0 +1,18 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+import Link from "./shared/Link.astro";
+import presentation from "@/data/presentation";
+---
+
+<footer class="flex flex-col gap-6 mt-10">
+  <h3 class="text-xl text-neutral-100">Get in touch</h3>
+  <div>
+    <p class="text-base text-slate-300 leading-6 font-normal mb-2">
+      Email me at <Link
+        href={`mailto:${presentation.mail}`}
+        label={presentation.mail}
+      /> or follow me via my social links.
+    </p>
+    <SocialLinks />
+  </div>
+</footer>

@@ -1,10 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-
 import Layout from "@/layouts/Layout.astro";
-import SocialLinks from "@/components/SocialLinks.astro";
 import PostCardV2 from "@/components/PostCardV2.astro";
-import Link from "@/components/shared/Link.astro";
 import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
 
 import presentation from "@/data/presentation";
@@ -38,7 +35,7 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
 
           <span class="text-base leading-8 text-slate-400">{presentation.salutation}</span>
           <h1 
-            class="text-3xl md:text-5xl text-neutral-100 font-normal"
+            class="text-3xl md:text-5xl text-neutral-100 font-semibold"
             set:html={presentation.title}
           />
         </div>
@@ -51,9 +48,8 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
     </article>
 
     <article class="flex flex-col gap-16">
-      <header class="flex w-full flex-row justify-between gap-2 items-baseline border-dashed border-y border-gray-800 py-4">
-        <h3 class="font-semibold text-slate-500 uppercase">Latest posts</h3>
-        <Link href="/posts" label="See all posts &rarr;" target="_self" />
+      <header class="flex w-full flex-row justify-between gap-2 items-baseline">
+        <h3 class="text-3xl font-medium text-slate-100">Latest posts</h3>
       </header>
       {sortedPublishedPosts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
@@ -72,20 +68,9 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
               ))
         }
       </section>
-    </article>
-
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Get in touch</h3>
-      </header>
-      <p>
-        Email me at <Link
-          href={`mailto:${presentation.mail}`}
-          label={presentation.mail}
-        /> or follow me via my social links.
-      </p>
-
-      <SocialLinks />
+      <!-- <header class="flex w-full flex-row justify-between gap-2 items-baseline "> -->
+        <a href="/posts" class="p-4 bg-slate-950/50 hover:bg-slate-950 border-solid border border-slate-700 rounded-lg text-center">See all {sortedPublishedPosts.length} posts &rarr;</a>
+      <!-- </header> -->
     </article>
   </main>
 </Layout>

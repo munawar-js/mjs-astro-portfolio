@@ -13,9 +13,9 @@ type Presentation = {
 };
 
 const presentation: Presentation = {
-  mail: "hey@munawarjs.com",
+  mail: "hey.munawar@gmail.com",
   salutation: "Hey there, I’m ",
-  title: "M <span>Munawar</span> Ahmed 👋",
+  title: "M <span>Munawar</span> Ahmed",
   // profile: "/munawar-ahmed.png",
   description:
     "Frontend Design Engineer with a deep understanding of UI/UX Design, React.js, WordPress, and a proven track record in delivering end-to-end design and development solutions for web applications, websites, and design systems.",
