@@ -1,5 +1,5 @@
 body {
-  background: url(/public/bg-abstract.png) no-repeat fixed, 
+  background: url(/public/bg-abstract.webp) no-repeat fixed, 
               radial-gradient(105.04% 44.65% at 51.59% 0%, #0F0A20, #140D1A);
   background-size: contain;
 }
