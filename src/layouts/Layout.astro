@@ -12,6 +12,7 @@ import "@/styles/post.css";
 export type Props = HeadTags;
 
 const headTags = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
@@ -23,6 +24,7 @@ const headTags = Astro.props;
   >
     <Header />
     <slot />
+    <ViewTransitions />
     <Footer />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GW38D46RW"></script>
