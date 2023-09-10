@@ -11,6 +11,8 @@ isPublish: true
 
 Link prefetching is a technique that can be used to speed up page-to-page transitions by preloading resources that are likely to be needed next. It can help reduce the perceived latency of the application by reducing the time between clicking a link and seeing the next page.
 
+> **Update on 10 Sep 2023** Astro launched *View Transitions* and we have implemented on [munawarjs.com](https://munawarjs.com), Now navigating between pages feel buttery smooth. As Astro uses pre-fetching on hover :)
+
 Astro, Gatsby and Next.js are all popular frameworks for building web applications with React. They all have different approaches to link prefetching.
 
 **Astro** uses a built-in link prefetching mechanism that automatically prefetches pages when they are hovered over or focused on. This can help speed up page transitions without requiring any additional configuration.

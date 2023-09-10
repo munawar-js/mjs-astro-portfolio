@@ -28,7 +28,7 @@
 }
 
 .post blockquote {
-  @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-red-400 before:content-[''];
+  @apply flex flex-row gap-4 before:block before:h-auto before:w-1 before:max-w-[2px] before:bg-sky-300 before:content-[''];
 }
 
 .post pre {
