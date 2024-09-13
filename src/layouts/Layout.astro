@@ -13,6 +13,7 @@ export type Props = HeadTags;
 
 const headTags = Astro.props;
 import { ViewTransitions } from 'astro:transitions';
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 
 <!DOCTYPE html>
@@ -30,5 +31,6 @@ import { ViewTransitions } from 'astro:transitions';
     <slot />
     <ViewTransitions />
     <Footer />
+    <SpeedInsights />
   </body>
 </html>
