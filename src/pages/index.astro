@@ -8,11 +8,11 @@ import presentation from "@/data/presentation";
 
 const posts = await getCollection("posts");
 
-const publishedPosts = posts.filter(post => post.data.isPublish);
+const publishedPosts = posts.filter(({ data }) => data.isPublish);
 
-const sortedPublishedPosts = publishedPosts.sort((first, second) => {
-  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
-});
+const sortedPublishedPosts = publishedPosts.sort((a, b) => 
+  b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+);
 
 ---
 
@@ -51,25 +51,26 @@ const sortedPublishedPosts = publishedPosts.sort((first, second) => {
       <header class="flex w-full flex-row justify-between gap-2 items-baseline">
         <h3 class="text-xl md:text-3xl font-medium text-slate-100">Latest posts</h3>
       </header>
-      {sortedPublishedPosts.length === 0 && <p>Soon, stay connected 👀...</p>}
-
-      <section class="flex flex-col gap-12 md:flex-row md:flex-wrap">
-        {
-          sortedPublishedPosts.length !== 0 &&
-          sortedPublishedPosts
-              .slice(0, 5)
-              .map((post) => (
-                <PostCardV2
-                  publishedAt={post.data.publishedAt}
-                  title={post.data.title}
-                  description={post.data.description}
-                  slug={post.slug}
-                  tags={post.data.tags}
-                />
-              ))
-        }
-      </section>
-      <a href="/posts" class="mt-4 md:mt-0 p-4 bg-slate-950/50 hover:bg-slate-950 border-solid border border-slate-700 rounded-lg text-center">See all {sortedPublishedPosts.length} posts &rarr;</a>
+      {sortedPublishedPosts.length ? (
+        <>
+          <section class="flex flex-col gap-12 md:flex-row md:flex-wrap">
+            {sortedPublishedPosts.slice(0, 5).map((post) => (
+              <PostCardV2
+                publishedAt={post.data.publishedAt}
+                title={post.data.title}
+                description={post.data.description}
+                slug={post.slug}
+                tags={post.data.tags}
+              />
+            ))}
+          </section>
+          <a href="/posts" class="mt-4 md:mt-0 p-4 bg-slate-950/50 hover:bg-slate-950 border-solid border border-slate-700 rounded-lg text-center">
+            See all {sortedPublishedPosts.length} posts &rarr;
+          </a>
+        </>
+      ) : (
+        <p>Soon, stay connected 👀...</p>
+      )}
     </section>
   </main>
 </Layout>
