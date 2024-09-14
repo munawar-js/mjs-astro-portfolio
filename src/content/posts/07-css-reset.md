@@ -1,14 +1,21 @@
 ---
-title: "Demystifying CSS Resets: Achieving Cross-Browser Web Design Harmony and Streamlined Styling"
-publishedAt: 2023-09-17
-description: "CSS resets made simple: Explore their significance, conquer cross-browser challenges, assess the pros and cons, embrace expert techniques, and utilize code samples for streamlined web styling."
-slug: "css-reset"
+title: >-
+  Demystifying CSS Resets: Achieving Cross-Browser Web Design Harmony and
+  Streamlined Styling
+publishedAt: 2023-09-17T00:00:00.000Z
+description: >-
+  CSS resets made simple: Explore their significance, conquer cross-browser
+  challenges, assess the pros and cons, embrace expert techniques, and utilize
+  code samples for streamlined web styling.
+slug: css-reset
 tags:
-  - CSS
+  - css
 isPublish: true
 ---
 
 CSS reset is a set of CSS rules that help make web pages look more consistent across different web browsers. It's like setting up a common baseline so that you have more control over how your website looks, no matter which browser someone uses.
+
+![](/featured-image.png)
 
 ## Why is it Important?
 
@@ -46,7 +53,7 @@ A CSS reset can affect a website in different browsers in several ways:
 
 ### Manual Reset
 
-Manually reset CSS properties for common elements like headings, paragraphs, lists, and links. You set these properties to default values to create a consistent baseline. 
+Manually reset CSS properties for common elements like headings, paragraphs, lists, and links. You set these properties to default values to create a consistent baseline.
 
 Here's an example
 
@@ -63,7 +70,7 @@ body, h1, h2, h3, p, ul, ol, li, a {
 
 ### Using Normalize.css
 
-Normalize.css is a widely used CSS reset library that makes your styles consistent across different browsers. You include it in your project, and it handles the reset for you. 
+Normalize.css is a widely used CSS reset library that makes your styles consistent across different browsers. You include it in your project, and it handles the reset for you.
 
 Here's how to include Normalize.css in your HTML
 
@@ -83,9 +90,11 @@ Here's how to include Normalize.css in your HTML
 You can also download Normalize.css and include it locally in your project if you prefer.
 
 ## Sample Code:
+
 Here's a basic example of using Normalize.css along with some custom styling:
 
 **HTML (index.html):**
+
 ```html
 <!DOCTYPE html>
   <html>
@@ -116,6 +125,7 @@ Here's a basic example of using Normalize.css along with some custom styling:
 ```
 
 **CSS (styles.css):**
+
 ```css
 /* Your custom CSS styles go here */
 body {

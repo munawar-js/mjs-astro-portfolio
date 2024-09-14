@@ -1,8 +1,10 @@
 ---
-title: "Decoding difference between HTML and XHTML"
-publishedAt: 2023-08-30
-description: "Enhance your web development skills as we unravel the intriguing HTML vs XHTML debate"
-slug: "difference-between-HTML-XHTML"
+title: Decoding difference between HTML and XHTML
+publishedAt: 2023-08-30T00:00:00.000Z
+description: >-
+  Enhance your web development skills as we unravel the intriguing HTML vs XHTML
+  debate
+slug: difference-between-HTML-XHTML
 tags:
   - HTML
 isPublish: true
@@ -10,7 +12,7 @@ isPublish: true
 
 ### **HTML (Hypertext Markup Language)**
 
-HTML is like the language that web browsers understand. It's used to create the structure and content of web pages. 
+HTML is like the language that web browsers understand. It's used to create the structure and content of web pages.
 
 Think of it as the backbone of a webpage. In HTML, you use tags (like <tagname>) to define different elements such as headings, paragraphs, images, links, and more. HTML is forgiving in the sense that it doesn't always require perfect syntax and structure to work properly in web browsers.
 
